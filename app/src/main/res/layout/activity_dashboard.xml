@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnDashboardBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_outline_button"
+                android:contentDescription="@string/back"
+                android:src="@drawable/ic_arrow_back" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERSONAL BUDGET TRACKER"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_blue"/>
+
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, User!"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="₱"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_logo"/>
+
+        </LinearLayout>
+
+        <!-- Total Balance Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:orientation="vertical"
+            android:padding="22dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_primary_button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL BALANCE"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#DBEAFE"/>
+
+            <TextView
+                android:id="@+id/tvTotalBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₱0.00"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your current available balance"
+                android:textSize="13sp"
+                android:textColor="#DBEAFE"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Income and Expense -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="115dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="7dp"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/bg_input">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MONTHLY INCOME"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/tvMonthlyIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₱0.00"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="115dp"
+                android:layout_weight="1"
+                android:layout_marginStart="7dp"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/bg_input">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MONTHLY EXPENSES"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray"/>
+
+                <TextView
+                    android:id="@+id/tvMonthlyExpenses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₱0.00"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="15dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Remaining Budget -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_input">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REMAINING MONTHLY BUDGET"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvRemainingBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₱0.00"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_blue"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/etMonthlyBudget"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_input"
+                android:hint="Enter your monthly budget (₱)"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <Button
+                android:id="@+id/btnSaveBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_primary_button"
+                android:backgroundTint="@null"
+                android:text="Save Monthly Budget"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <!-- Quick Actions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Actions"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="25dp"/>
+
+        <Button
+            android:id="@+id/btnAddTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:text="+ ADD TRANSACTION"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_primary_button"
+            android:backgroundTint="@null"/>
+
+        <Button
+            android:id="@+id/btnViewHistory"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:text="VIEW TRANSACTION HISTORY"
+            android:textStyle="bold"
+            android:textColor="@color/primary_blue"
+            android:background="@drawable/bg_outline_button"
+            android:backgroundTint="@null"/>
+
+        <!-- Recent Transactions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Transactions"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="28dp"/>
+
+        <TextView
+            android:id="@+id/tvRecentTransactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No transactions yet. Start by adding your first transaction."
+            android:textSize="14sp"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:padding="22dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_input"/>
+
+        <!-- Logout -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="LOG OUT"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:background="@drawable/bg_outline_button"
+            android:backgroundTint="@null"/>
+
+    </LinearLayout>
+
+</ScrollView>

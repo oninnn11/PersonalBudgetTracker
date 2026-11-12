@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Personal Budget Tracker</string>
+    <string name="welcome_title">Manage Your Money Better</string>
+    <string name="welcome_description">Track your income, expenses, and monthly budget in one place.</string>
+    <string name="back">Back</string>
+</resources>
